@@ -6,7 +6,7 @@ try {
   console.error("Secrets-file not found. S3 deploy,emt disabled. " + e);
 }
 
-exports.postBuild = function(pages, callback) {
+exports.onPostBuild = function(pages, callback) {
   // perform actions on pages here
 
   if (secrets && secrets.s3) {
